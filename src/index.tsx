@@ -1,7 +1,8 @@
+import './index.css';
+import App from './App/App';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import {NodeProvider} from './Contexts/NodesContext';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +10,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <NodeProvider>
+      <App/>
+    </NodeProvider>
   </React.StrictMode>
 );
 
